@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/request-money.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:42:47 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Request Money - PWA HTML Template</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  <link href="assets/css/index.css" rel="stylesheet"></head>
+  <body class="">
+    <main class="container dark:bg-n0 text-n900 dark:text-white pt-8 min-h-dvh">
+      <div class="px-6 flex justify-between items-center">
+        <a
+          href="home.html"
+          class="flex justify-center items-center bg-g300 w-12 h-12 rounded-full text-2xl !leading-none text-white"
+        >
+          <i class="ph ph-caret-left"></i>
+        </a>
+        <div class="flex-1 flex justify-center items-center pr-12">
+          <p class="text-2xl font-semibold">Request Money</p>
+        </div>
+      </div>
+      <div class="px-6 pt-8 flex flex-col gap-4">
+        <a
+          href="select-contact-to-request.html"
+          class="flex flex-col justify-start"
+        >
+          <p class="text-sm font-semibold pb-2 dark:text-white">
+            Select Contact
+          </p>
+          <div
+            class="p-4 bg-n20 border border-n40 dark:bg-darkN20 dark:border-darkN40 flex justify-between items-center rounded-xl"
+          >
+            <p class="text-n90 text-sm dark:text-white">Select Contact</p>
+            <i class="ph ph-user text-n90 text-lg !leading-none"></i>
+          </div>
+        </a>
+        <div class="flex flex-col justify-start">
+          <p class="text-sm font-semibold pb-2 dark:text-white">
+            Select payment method
+          </p>
+          <div class="relative">
+            <div
+              class="p-3 flex justify-between items-center gap-2 bg-n20 border border-n40 dark:bg-darkN20 dark:border-darkN40 rounded-xl cursor-pointer selectCountry"
+            >
+              <div class="flex justify-start items-center gap-1">
+                <div
+                  class="size-7 flex justify-center items-center rounded-full bg-white dark:bg-darkG300"
+                >
+                  <img src="assets/images/payoneer.png" alt="" />
+                </div>
+                <p class="text-n90 text-sm dark:text-white selectedItem">
+                  Credit Card
+                </p>
+              </div>
+              <i class="ph ph-caret-down text-n90 text-lg !leading-none"></i>
+            </div>
+            <div
+              class="bg-white p-4 rounded-xl border border-n40 dark:border-darkN40 dark:bg-darkG300 w-full absolute right-0 top-14 max-h-[150px] overflow-y-auto selectCountryModal invisible opacity-0 scale-75 duration-500"
+            >
+              <ul class="flex flex-col gap-2">
+                <li
+                  class="text-xs text-n500 dark:text-darkN500 pb-2 border-b border-dashed border-n40 dark:border-darkN40 cursor-pointer item"
+                >
+                  Credit Card
+                </li>
+                <li
+                  class="text-xs text-n500 dark:text-darkN500 pb-2 border-b border-dashed border-n40 dark:border-darkN40 cursor-pointer item"
+                >
+                  Paypal
+                </li>
+                <li
+                  class="text-xs text-n500 dark:text-darkN500 pb-2 border-b border-dashed border-n40 dark:border-darkN40 cursor-pointer item"
+                >
+                  Payoneer
+                </li>
+                <li
+                  class="text-xs text-n500 dark:text-darkN500 pb-2 border-b border-dashed border-n40 dark:border-darkN40 cursor-pointer item"
+                >
+                  Bank
+                </li>
+                <li
+                  class="text-xs text-n500 dark:text-darkN500 cursor-pointer item"
+                >
+                  Wallet
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col justify-start">
+          <p class="text-sm font-semibold pb-2 dark:text-white">
+            Write a massage
+          </p>
+          <div
+            class="p-4 bg-n20 border border-n40 dark:bg-darkN20 dark:border-darkN40 rounded-xl"
+          >
+            <textarea
+              placeholder="Write a message..."
+              class="w-full bg-transparent outline-none placeholder:text-n90 text-sm dark:text-white min-h-[80px]"
+            ></textarea>
+          </div>
+        </div>
+        <div class="flex flex-col justify-start">
+          <p class="text-sm font-semibold pb-2 dark:text-white">Amount</p>
+          <div
+            class="p-4 bg-white border border-n40 dark:bg-darkN20 dark:border-darkN40 rounded-xl"
+          >
+            <input
+              type="number"
+              placeholder="|"
+              class="w-full bg-transparent outline-none placeholder:text-black text-[52px] dark:placeholder:text-white dark:text-white font-bold"
+            />
+          </div>
+        </div>
+        <div class="flex justify-between items-center">
+          <div class="flex justify-start items-center gap-2">
+            <p class="text-n500 text-sm dark:text-darkN500 font-semibold">
+              Bank Fee
+            </p>
+            <i class="ph ph-info text-g300 text-xl !leading-none"></i>
+          </div>
+          <p class="text-n500 text-sm dark:text-darkN500">$ 2.00</p>
+        </div>
+      </div>
+      <div class="my-3 flex px-6 pt-8">
+        <a
+          href="money-request-successfully.html"
+          class="flex-1 py-3 bg-g300 text-white text-center rounded-xl"
+          >Request</a
+        >
+      </div>
+    </main>
+
+    <!-- ======Javascript Dependencies -->
+    <script src="assets/js/main.js"></script>
+  <script defer src="index.js"></script></body>
+
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/request-money.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:42:49 GMT -->
+</html>

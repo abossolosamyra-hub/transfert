@@ -44,3 +44,6 @@ class Database {
     // Prevent cloning of the instance
     private function __clone() {}
 }
+
+$db = Database::getInstance();
+$connection = $db->getConnection();
