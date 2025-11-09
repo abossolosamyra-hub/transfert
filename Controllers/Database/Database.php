@@ -47,3 +47,4 @@ class Database {
 
 $db = Database::getInstance();
 $connection = $db->getConnection();
+$error = '';

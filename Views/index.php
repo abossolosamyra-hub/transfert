@@ -31,7 +31,7 @@
       </div>
     </div>
     <!-- Splash Screen End -->
-     <a href="./sign-up.html">s'inscrire</a>
+     <a href="./sign-up.php">s'inscrire</a>
 
     <!-- ======Javascript Dependencies -->
     <script src="./assets/js/main.js"></script>
