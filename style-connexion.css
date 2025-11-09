@@ -1,0 +1,50 @@
+body,html{
+    height:100%;
+    margin:0;
+    font-family:Arial,sans-serif;
+}
+.background{
+    background:url('s.jpg') no-repeat center center/cover;
+    filter:blur(6px);
+    height:100%;
+    width:100%;
+    position:fixed;
+    z-index:-1;
+}
+.login-box{
+    background-color:rgba(0,0,0,0.75);
+    color:white;
+    padding:30px;
+    width:300px;
+    margin:100px auto;
+    border-radius:10px;
+    box-shadow:0 0 10px black;
+}
+.login-box input,.login-box button{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:none;
+    border-radius:5px;
+}
+h2{
+    text-align:center;
+}
+form button {
+background-color: #2c3e50;
+color:aqua;
+padding: 10px 15px;
+border: none;
+border-radius: 100px;
+cursor: pointer;
+}
+form button:hover{
+background-color: #1a25;
+}
+select{
+    width: 100%;
+    padding: 10px;
+    margin: 10 0;
+    border: none;
+    border-radius:5px;
+}
