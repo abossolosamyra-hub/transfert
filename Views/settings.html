@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:43:24 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - PWA HTML Template</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  <link href="assets/css/index.css" rel="stylesheet"></head>
+  <body class="">
+    <!-- Splash Screen Start -->
+    <div class="preloader inset-0 z-50">
+      <div
+        class="h-full bg-bgColor flex flex-col justify-center items-center text-center container"
+      >
+        <div class="zoomInOut">
+          <div class="">
+            <img src="assets/images/logo.png" alt="" />
+          </div>
+          <p class="pt-6 text-4xl font-bold text-n900">
+            Banku<span class="text-g300">X</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Splash Screen End -->
+    <main
+      class="container dark:bg-n0 text-n900 dark:text-white pt-8 min-h-dvh pb-28"
+    >
+      <div class="flex justify-center items-center pb-8">
+        <p class="text-2xl font-semibold">Settings</p>
+      </div>
+      <div
+        class="flex justify-between items-center bg-g300 p-6 rounded-2xl text-white mx-6"
+      >
+        <div class="flex justify-start items-center gap-4">
+          <img
+            src="assets/images/user-img.html"
+            class="size-16 rounded-full"
+            alt=""
+          />
+          <div class="">
+            <h2 class="heading-2 font-semibold text-xl">Nayeem Khan</h2>
+            <p class="pt-1">example@mail.com</p>
+          </div>
+        </div>
+        <button
+          class="text-xl size-11 rounded-full bg-white flex justify-center items-center text-n0 myQrCodeModalOpenButton"
+        >
+          <i class="ph ph-qr-code"></i>
+        </button>
+      </div>
+      <div class="pt-8 flex flex-col gap-5">
+        <a
+          href="notification-settings.html"
+          class="flex justify-between items-center pb-5 border-b border-dashed border-n40 dark:border-darkN40 px-6"
+        >
+          <div class="flex justify-start items-center gap-4">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-bell"></i>
+            </div>
+            <p class="font-semibold text-lg">Notifications</p>
+          </div>
+          <div class="">
+            <i class="ph ph-caret-right text-xl text-n70 dark:text-white"></i>
+          </div>
+        </a>
+        <a
+          href="edit-profile.html"
+          class="flex justify-between items-center pb-5 border-b border-dashed border-n40 dark:border-darkN40 px-6"
+        >
+          <div class="flex justify-start items-center gap-4">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-user"></i>
+            </div>
+            <p class="font-semibold text-lg">Personal Info</p>
+          </div>
+          <div class="">
+            <i class="ph ph-caret-right text-xl text-n70 dark:text-white"></i>
+          </div>
+        </a>
+        <a
+          href="security-settings.html"
+          class="flex justify-between items-center pb-5 border-b border-dashed border-n40 dark:border-darkN40 px-6"
+        >
+          <div class="flex justify-start items-center gap-4">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-shield-check"></i>
+            </div>
+            <p class="font-semibold text-lg">Security</p>
+          </div>
+          <div class="">
+            <i class="ph ph-caret-right text-xl text-n70 dark:text-white"></i>
+          </div>
+        </a>
+        <div
+          class="choose-mode flex cursor-pointer items-center justify-between pb-5 border-b border-dashed border-n40 dark:border-darkN40 px-6"
+        >
+          <div class="flex items-center justify-start gap-2">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-sun icon"></i>
+            </div>
+            <p class="font-semibold dark:text-white">Dark Mode</p>
+          </div>
+          <div
+            class="relative h-6 w-11 rounded-full bg-n40 dark:bg-darkN40 duration-500"
+          >
+            <div
+              class="absolute left-0.5 top-0.5 size-[20px] rounded-full bg-white duration-500 dark:left-[22px]"
+            ></div>
+          </div>
+        </div>
+
+        <a
+          href="help-center.html"
+          class="flex justify-between items-center pb-5 border-b border-dashed border-n40 dark:border-darkN40 px-6"
+        >
+          <div class="flex justify-start items-center gap-4">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-headset"></i>
+            </div>
+            <p class="font-semibold text-lg">Help Center</p>
+          </div>
+          <div class="">
+            <i class="ph ph-caret-right text-xl text-n70 dark:text-white"></i>
+          </div>
+        </a>
+        <a
+          href="language-settings.html"
+          class="flex justify-between items-center pb-5 border-b border-dashed border-n40 dark:border-darkN40 px-6"
+        >
+          <div class="flex justify-start items-center gap-4">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-translate"></i>
+            </div>
+            <p class="font-semibold text-lg">Language</p>
+          </div>
+          <div class="">
+            <i class="ph ph-caret-right text-xl text-n70 dark:text-white"></i>
+          </div>
+        </a>
+
+        <a
+          href="privacy-policy.html"
+          class="flex justify-between items-center pb-5 border-b border-dashed border-n40 dark:border-darkN40 px-6"
+        >
+          <div class="flex justify-start items-center gap-4">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-file"></i>
+            </div>
+            <p class="font-semibold text-lg">Privacy Policy</p>
+          </div>
+          <div class="">
+            <i class="ph ph-caret-right text-xl text-n70 dark:text-white"></i>
+          </div>
+        </a>
+        <a
+          href="about-us.html"
+          class="flex justify-between items-center pb-5 border-b border-dashed border-n40 dark:border-darkN40 px-6"
+        >
+          <div class="flex justify-start items-center gap-4">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-file"></i>
+            </div>
+            <p class="font-semibold text-lg">About BankuX</p>
+          </div>
+          <div class="">
+            <i class="ph ph-caret-right text-xl text-n70 dark:text-white"></i>
+          </div>
+        </a>
+        <div
+          class="flex justify-between items-center pb-5 logoutModalOpenButton cursor-pointer px-6"
+        >
+          <div class="flex justify-start items-center gap-4 cursor-pointer">
+            <div
+              class="text-xl size-11 rounded-full border border-bgColor2 flex justify-center items-center bg-bgColor text-g300 dark:bg-n0 dark:border-darkN40"
+            >
+              <i class="ph ph-sign-out"></i>
+            </div>
+            <p class="font-semibold text-g300">Logout</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed bottom-0 left-0 right-0 container">
+        <div
+          class="p-6 bg-g300 rounded-t-3xl flex justify-between items-center"
+        >
+          <a
+            href="home.html"
+            class="flex flex-col gap-1 justify-center items-center"
+          >
+            <i class="ph ph-house text-3xl !leading-none text-white"></i>
+            <p class="text-xs font-semibold text-white">Home</p>
+          </a>
+          <a
+            href="contacts.html"
+            class="flex flex-col gap-1 justify-center items-center"
+          >
+            <i class="ph ph-users-three text-3xl !leading-none text-white"></i>
+            <p class="text-xs font-semibold text-white">Contacts</p>
+          </a>
+          <a
+            href="scan-qr-code.html"
+            class="flex justify-center items-center p-3.5 bg-o300 rounded-full"
+          >
+            <i class="ph ph-barcode text-2xl !leading-none text-n0"></i>
+          </a>
+          <a
+            href="money-insights.html"
+            class="flex flex-col gap-1 justify-center items-center"
+          >
+            <i
+              class="ph ph-chart-line-up text-3xl !leading-none text-white"
+            ></i>
+            <p class="text-xs font-semibold text-white">Insights</p>
+          </a>
+          <a
+            href="settings.html"
+            class="flex flex-col gap-1 justify-center items-center"
+          >
+            <i class="ph-fill ph-user text-3xl !leading-none text-o300"></i>
+            <p class="text-xs font-semibold text-white">Account</p>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- Logout Modal Start -->
+    <div class="logoutModal bottom-modal container fixed inset-0 z-50">
+      <div
+        class="modalBg absolute inset-0 w-full bg-black opacity-30 dark:bg-white"
+      ></div>
+      <div
+        class="modal relative z-10 flex h-full flex-col items-end justify-end text-center dark:text-white"
+      >
+        <div class="absolute bottom-0 left-0 right-0">
+          <img
+            src="assets/images/rounded-modal-white-bg.png"
+            alt=""
+            class="block dark:hidden"
+          />
+          <img
+            src="assets/images/rounded-modal-black-bg.png"
+            alt=""
+            class="hidden dark:block"
+          />
+        </div>
+        <div class="relative w-full overflow-y-auto">
+          <div class="px-6 pt-8">
+            <div class="flex flex-col items-center justify-center gap-3 pb-4">
+              <p
+                class="w-full text-center text-2xl font-bold border-b border-n40 dark:border-darkN40 border-dashed pb-5 text-g300"
+              >
+                Logout
+              </p>
+              <p class="text-center text-n500 dark:text-darkN500">
+                Do you want to logout?
+              </p>
+            </div>
+          </div>
+
+          <div class="px-6 py-8">
+            <div class="flex justify-between items-center gap-4">
+              <button
+                class="flex-1 py-3 bg-bgColor text-g300 font-medium text-center rounded-xl border border-bgColor2 dark:bg-darkN20 dark:border-darkN40 logoutModalCloseButton"
+              >
+                Cancel
+              </button>
+              <a
+                href="sign-in.html"
+                class="flex-1 py-3 bg-g300 text-white text-center rounded-xl font-medium border border-g300"
+              >
+                Yes, Logout
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Logout Modal End -->
+
+    <!-- MyQr Code Start -->
+    <div class="myQrCodeModal bottom-modal container fixed inset-0 z-50">
+      <div
+        class="modalBg absolute inset-0 w-full bg-black opacity-30 dark:bg-white"
+      ></div>
+      <div
+        class="modal relative z-10 flex h-full flex-col items-end justify-end text-center dark:text-white"
+      >
+        <div
+          class="relative w-full overflow-y-auto bg-white dark:bg-n0 rounded-t-3xl"
+        >
+          <div class="px-6 pt-8">
+            <div class="flex flex-col items-center justify-center gap-6 pb-4">
+              <p
+                class="w-full text-center text-2xl font-bold border-b border-n40 dark:border-darkN40 border-dashed pb-5"
+              >
+                My QR Code
+              </p>
+              <div class="bg-n20 p-6 rounded-xl dark:bg-darkN20">
+                <img
+                  src="assets/images/qr-code.png"
+                  alt=""
+                  class="dark:hidden"
+                />
+                <img
+                  src="assets/images/qr-code-white.png"
+                  alt=""
+                  class="hidden dark:block"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 pb-8 pt-4">
+            <div class="flex justify-between items-center gap-4">
+              <button
+                class="flex-1 py-3 bg-bgColor text-g300 font-medium text-center rounded-xl border border-bgColor2 dark:bg-darkN20 dark:border-darkN40 myQrCodeModalCloseButton"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MyQr Code End -->
+
+    <!-- ======Javascript Dependencies -->
+    <script src="assets/js/main.js"></script>
+  <script defer src="index.js"></script></body>
+
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:43:34 GMT -->
+</html>

@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/contacts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:43:19 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts - PWA HTML Template</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  <link href="assets/css/index.css" rel="stylesheet"></head>
+  <body class="">
+    <!-- Splash Screen Start -->
+    <div class="preloader inset-0 z-50 hidden">
+      <div
+        class="h-full bg-bgColor flex flex-col justify-center items-center text-center container"
+      >
+        <div class="zoomInOut">
+          <div class="">
+            <img src="assets/images/logo.png" alt="" />
+          </div>
+          <p class="pt-6 text-4xl font-bold text-n900">
+            Banku<span class="text-g300">X</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Splash Screen End -->
+    <main
+      class="container dark:bg-n0 text-n900 dark:text-white pt-8 min-h-dvh pb-32"
+    >
+      <div class="px-6 flex justify-between items-center">
+        <div
+          class="flex justify-center items-center bg-g300 w-12 h-12 rounded-full text-2xl !leading-none text-white"
+        >
+          <i class="ph ph-caret-left"></i>
+        </div>
+        <div class="flex-1 flex justify-center items-center pr-12">
+          <p class="text-2xl font-semibold">Contacts</p>
+        </div>
+      </div>
+      <div class="pt-8 flex justify-start items-center gap-2 px-6">
+        <div
+          class="flex justify-between items-center flex-1 border border-n40 dark:border-darkN40 dark:bg-darkN20 rounded-xl p-3 gap-2"
+        >
+          <div class="">
+            <i class="ph ph-magnifying-glass text-n70"></i>
+          </div>
+          <input
+            type="text"
+            placeholder="Search here..."
+            class="placeholder:text-n90 text-xs bg-transparent outline-none flex-1"
+          />
+          <i class="ph ph-microphone text-n70"></i>
+        </div>
+        <button
+          class="p-3 bg-g300 rounded-md text-white text-2xl !leading-none flex justify-center items-center"
+        >
+          <i class="ph ph-sliders-horizontal"></i>
+        </button>
+      </div>
+
+      <div class="contact-tab">
+        <ul class="px-6 pt-8 flex justify-between items-center tab-button">
+          <li
+            class="flex-1 text-center text-lg font-semibold pb-1 border-b-2 border-g300 text-g300 tab-item cursor-pointer"
+          >
+            All Contacts
+          </li>
+          <li
+            class="flex-1 text-center text-lg font-semibold pb-1 border-b-2 border-n40 tab-item cursor-pointer"
+          >
+            Favourites
+          </li>
+        </ul>
+
+        <div class="flex justify-between items-start gap-4 pt-8 px-6">
+          <div class="animationOne content flex-1" id="all-contacts">
+            <div class="flex flex-col gap-8 flex-1">
+              <div class="">
+                <p class="text-xl font-semibold pb-5">A</p>
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-1.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Alice Anderson</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            alice.anderson@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-2.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Adam Adams</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            adam.adams@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-3.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Abigail Adams</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            abigail.adams@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-4.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Audrey Adams</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            audrey.adams@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <p class="text-xl font-semibold pb-5">B</p>
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-2.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Barbara Brown</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            barbara.brown@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-3.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Brenda Brooks</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            brenda.brooks@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-5.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Brian Brown</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            brian.brown@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <p class="text-xl font-semibold pb-5">C</p>
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-3.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Charlie Clark</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            charlie.clark@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <p class="text-xl font-semibold pb-5">D</p>
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-4.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">David Davis</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            david.davis@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <p class="text-xl font-semibold pb-5">E</p>
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-5.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Eve Evans</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            eve.evans@example.com
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="animationTwo content hidden flex-1" id="favourites">
+            <div class="flex flex-col gap-8 flex-1">
+              <div class="">
+                <p class="text-xl font-semibold pb-5">A</p>
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-2.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Russell Erickson</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            bipfan@nemud.pw
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-4.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Birdie Wade</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            notjev@makiko.gp
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-5.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Abbie McKenzie</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            diaso@edmu.eu
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="">
+                <p class="text-xl font-semibold pb-5">B</p>
+                <div class="flex flex-col gap-4">
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-1.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Warren Ferguson</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            sugihbon@hagivaro.wf
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/transaction-img-1.png"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Marie Benson</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            carih@mehaguji.bn
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                  <a
+                    href="contact-details.html"
+                    class="p-4 rounded-2xl border border-n40 flex flex-col gap-4 dark:border-darkN40"
+                  >
+                    <div class="flex justify-between items-center">
+                      <div class="flex justify-start items-center gap-4">
+                        <div
+                          class="rounded-full bg-bgColor2 w-[60px] h-[60px] overflow-hidden"
+                        >
+                          <img
+                            src="assets/images/people-2.png"
+                            class="w-full h-full object-cover"
+                            alt=""
+                          />
+                        </div>
+                        <div class="">
+                          <p class="font-semibold">Annie Olson</p>
+                          <p
+                            class="text-n500 dark:text-darkN500 text-xs pt-2.5"
+                          >
+                            gizodfis@dosezvun.mo
+                          </p>
+                        </div>
+                      </div>
+                      <div class="">
+                        <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex flex-col gap-3 border border-n40 dark:border-darkN40 rounded-xl text-n500 dark:text-darkN500 text-sm p-1 text-center"
+          >
+            <p>A</p>
+            <p>B</p>
+            <p>C</p>
+            <p>D</p>
+            <p>E</p>
+            <p>F</p>
+            <p>G</p>
+            <p>H</p>
+            <p>I</p>
+            <p>J</p>
+            <p>K</p>
+            <p>L</p>
+            <p>M</p>
+            <p>N</p>
+            <p>O</p>
+            <p>P</p>
+            <p>Q</p>
+            <p>R</p>
+            <p>S</p>
+            <p>T</p>
+            <p>U</p>
+            <p>V</p>
+            <p>W</p>
+            <p>X</p>
+            <p>Y</p>
+            <p>Z</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed bottom-0 left-0 right-0 container">
+        <div
+          class="p-6 bg-g300 rounded-t-3xl flex justify-between items-center"
+        >
+          <a
+            href="home.html"
+            class="flex flex-col gap-1 justify-center items-center"
+          >
+            <i class="ph ph-house text-3xl !leading-none text-white"></i>
+            <p class="text-xs font-semibold text-white">Home</p>
+          </a>
+          <a
+            href="contacts.html"
+            class="flex flex-col gap-1 justify-center items-center"
+          >
+            <i
+              class="ph-fill ph-users-three text-3xl !leading-none text-o300"
+            ></i>
+            <p class="text-xs font-semibold text-white">Contacts</p>
+          </a>
+          <a
+            href="scan-qr-code.html"
+            class="flex justify-center items-center p-3.5 bg-o300 rounded-full"
+          >
+            <i class="ph ph-barcode text-2xl !leading-none text-n0"></i>
+          </a>
+          <a
+            href="money-insights.html"
+            class="flex flex-col gap-1 justify-center items-center"
+          >
+            <i
+              class="ph ph-chart-line-up text-3xl !leading-none text-white"
+            ></i>
+            <p class="text-xs font-semibold text-white">Insights</p>
+          </a>
+          <a
+            href="settings.html"
+            class="flex flex-col gap-1 justify-center items-center"
+          >
+            <i class="ph ph-user text-3xl !leading-none text-white"></i>
+            <p class="text-xs font-semibold text-white">Account</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="fixed bottom-6 right-0 left-0 container">
+        <div class="">
+          <a
+            href="add-new-contact.html"
+            class="w-[60px] h-[60px] rounded-full bg-o300 flex justify-center items-center absolute bottom-32 right-6"
+          >
+            <i class="ph ph-plus text-xl !leading-none"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <!-- ======Javascript Dependencies -->
+    <script src="assets/js/main.js"></script>
+  <script defer src="index.js"></script></body>
+
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/contacts.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:43:20 GMT -->
+</html>

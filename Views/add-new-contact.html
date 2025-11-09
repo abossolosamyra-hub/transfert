@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/add-new-contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:43:42 GMT -->
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add New Contact - PWA HTML Template</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+    <link rel="manifest" href="manifest.json" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  <link href="assets/css/index.css" rel="stylesheet"></head>
+  <body class="">
+    <main class="container dark:bg-n0 text-n900 dark:text-white pt-8 min-h-dvh">
+      <div class="px-6 flex justify-between items-center">
+        <div
+          class="flex justify-center items-center bg-g300 w-12 h-12 rounded-full text-2xl !leading-none text-white"
+        >
+          <i class="ph ph-caret-left"></i>
+        </div>
+        <div class="flex-1 flex justify-center items-center pr-12">
+          <p class="text-2xl font-semibold">Add New Contact</p>
+        </div>
+      </div>
+
+      <form class="flex flex-col gap-4 pt-8 px-6">
+        <div class="flex flex-col justify-start">
+          <p class="text-sm font-semibold pb-2 dark:text-white">
+            Account Holder Name
+          </p>
+          <div
+            class="p-4 bg-n20 border border-n40 dark:bg-darkN20 dark:border-darkN40 rounded-xl"
+          >
+            <input
+              type="text"
+              placeholder="Enter name"
+              class="w-full bg-transparent outline-none placeholder:text-n90 text-sm dark:text-white"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col justify-start">
+          <p class="text-sm font-semibold pb-2 dark:text-white">Email</p>
+          <div
+            class="p-4 bg-n20 border border-n40 dark:bg-darkN20 dark:border-darkN40 rounded-xl"
+          >
+            <input
+              type="text"
+              placeholder="Enter Email"
+              class="w-full bg-transparent outline-none placeholder:text-n90 text-sm dark:text-white"
+            />
+          </div>
+        </div>
+      </form>
+      <div class="py-8 px-6">
+        <div class="flex justify-between items-center gap-4">
+          <a
+            href="#"
+            class="flex-1 py-3 bg-bgColor text-g300 font-medium text-center rounded-xl border border-bgColor2 dark:bg-darkN20 dark:border-darkN40"
+            >Cancel</a
+          >
+          <button
+            class="flex-1 py-3 bg-g300 text-white text-center rounded-xl font-medium border border-g300 contactSavedConfirmationModalOpenButton"
+          >
+            Save Contact
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Contact Saved Confirmation Modal Start  -->
+    <div
+      class="contactSavedConfirmationModal container fixed inset-0 z-30 popup-modal"
+    >
+      <div
+        class="modalBg absolute inset-0 bg-black opacity-30 dark:bg-white"
+      ></div>
+      <div
+        class="modal relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+      >
+        <div class="rounded-2xl bg-white p-7 dark:bg-n0 w-full">
+          <div class="flex justify-center items-center pb-8">
+            <div
+              class="w-20 h-20 rounded-full bg-g300 flex justify-center items-center"
+            >
+              <i class="ph ph-check text-white text-[40px] !leading-none"></i>
+            </div>
+          </div>
+          <p
+            class="text-2xl font-semibold text-center px-8 pb-5 border-b border-dashed border-n40 dark:border-darkN40 dark:text-white"
+          >
+            Save to Contact
+          </p>
+
+          <p class="text-center pt-5 w-full text-n500 dark:text-darkN500">
+            Contact Saved successfully.
+          </p>
+          <div class="flex justify-between items-center gap-4 pt-5">
+            <button
+              class="flex-1 py-3 bg-bgColor text-g300 font-medium text-center rounded-xl border border-bgColor2 dark:bg-darkN20 dark:border-darkN40 contactSavedConfirmationModalCloseButton"
+            >
+              Close
+            </button>
+            <a
+              href="contacts.html"
+              class="flex-1 py-3 bg-g300 text-white text-center rounded-xl font-medium border border-g300"
+              >Go To Contacts</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact Saved Confirmation Modal End -->
+
+    <!-- ======Javascript Dependencies -->
+    <script src="assets/js/main.js"></script>
+  <script defer src="index.js"></script></body>
+
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/add-new-contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:43:42 GMT -->
+</html>
