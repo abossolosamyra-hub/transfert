@@ -1,3 +1,7 @@
+<?php 
+require_once __DIR__ . '/../Controllers/Database/Database.php';
+require_once __DIR__ . '/../Controllers/Session/GetSession.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
   

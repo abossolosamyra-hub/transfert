@@ -1,5 +1,6 @@
 <?php 
-
+require_once __DIR__ . '/../Controllers/Database/Database.php';
+require_once __DIR__ . '/../Controllers/Session/GetSession.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +45,7 @@
         </div>
 
         <p class="text-2xl font-semibold">
-          Banku<span class="text-g300">X</span>
+          <?php echo $userName ?><!-- <span class="text-g300">X</span> -->
         </p>
 
         <a
@@ -61,7 +62,7 @@
       </div>
       <div class="text-center flex justify-between items-center flex-col py-8">
         <p class="text-[52px] font-bold flex justify-start -mt-3">
-          7,895 <span class="text-xl text-g300 pt-2.5">$</span>
+          <?php echo $userAccount ?> <span class="text-xl text-g300 pt-2.5">$</span>
         </p>
         <p class="text-n500 dark:text-darkN500">Your Balance</p>
       </div>
@@ -81,7 +82,7 @@
             </p>
           </a>
           <a
-            href="send-money.html"
+            href="send-money.php"
             class="bg-red-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0"
           >
             <div
