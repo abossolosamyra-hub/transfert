@@ -1,325 +1,237 @@
-<?php 
+<?php
 require_once __DIR__ . '/../Controllers/Database/Database.php';
 require_once __DIR__ . '/../Controllers/Session/GetSession.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  
-<!-- Mirrored from softivuspro.com/html/bankux/main-demo/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:42:18 GMT -->
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home - PWA HTML Template</title>
 
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-    <link rel="manifest" href="manifest.json" />
-    <link
-      rel="shortcut icon"
-      href="assets/images/favicon.ico"
-      type="image/x-icon"
-    />
-  <link href="assets/css/index.css" rel="stylesheet"></head>
-  <body class="">
-    <!-- Splash Screen Start -->
-    <div class="preloader inset-0 z-50">
-      <div
-        class="h-full bg-bgColor flex flex-col justify-center items-center text-center container"
-      >
-        <div class="zoomInOut">
-          <div class="">
-            <img src="assets/images/logo.png" alt="" />
+<!-- Mirrored from softivuspro.com/html/bankux/main-demo/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:42:18 GMT -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - PWA HTML Template</title>
+
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <link href="assets/css/index.css" rel="stylesheet">
+</head>
+
+<body class="">
+  <!-- Splash Screen Start -->
+  <div class="preloader inset-0 z-50">
+    <div class="h-full bg-bgColor flex flex-col justify-center items-center text-center container">
+      <div class="zoomInOut">
+        <div class="">
+          <img src="assets/images/logo.png" alt="" />
+        </div>
+        <p class="pt-6 text-4xl font-bold text-n900">
+          Banku<span class="text-g300">X</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Splash Screen End -->
+  <main class="container bg-bgColor dark:bg-darkG300 text-n900 dark:text-white pt-8 min-h-dvh flex flex-col">
+    <div class="px-6 flex justify-between items-start">
+      <div class="rounded-full w-12 h-12 overflow-hidden bg-bgColor2">
+        <img src="assets/images/user.png" alt="" />
+      </div>
+
+      <p class="text-2xl font-semibold">
+        <?php echo $userName ?><!-- <span class="text-g300">X</span> -->
+      </p>
+
+      <a href="#"
+        class="text-2xl text-g300 border border-n500 !leading-none flex justify-center items-center rounded-full p-2 relative bg-white dark:bg-n0">
+        <div class="absolute top-0 right-0 bg-bgColor rounded-full w-3 h-3 flex justify-center items-center dark:bg-n0">
+          <div class="w-2 h-2 rounded-full bg-red-500"></div>
+        </div>
+        <i class="ph-fill ph-bell-simple"></i>
+      </a>
+    </div>
+    <div class="text-center flex justify-between items-center flex-col py-8">
+      <p class="text-[52px] font-bold flex justify-start -mt-3">
+        <?php echo $userAccount ?> <span class="text-xl text-g300 pt-2.5">$</span>
+      </p>
+      <p class="text-n500 dark:text-darkN500">Votre Balance</p>
+    </div>
+    <div class="px-6 relative z-20">
+      <div class="flex gap-3 justify-start items-center">
+        <a href="#"
+          class="bg-orange-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0">
+          <div class="h-7 w-7 rounded-full bg-n0 flex justify-center items-center">
+            <img src="assets/images/icon1.png" class="size-4" alt="" />
           </div>
-          <p class="pt-6 text-4xl font-bold text-n900">
-            Banku<span class="text-g300">X</span>
+          <p class="pt-3 text-center dark:text-n0 font-medium text-sm">
+            Emprunt
           </p>
+        </a>
+        <a href="send-money.php"
+          class="bg-red-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0">
+          <div class="h-7 w-7 rounded-full bg-n0 flex justify-center items-center">
+            <img src="assets/images/icon2.png" class="size-4" alt="" />
+          </div>
+          <p class="pt-3 text-center dark:text-n0 font-medium text-sm">
+            Envoi
+          </p>
+        </a>
+        <a href="#"
+          class="bg-yellow-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0">
+          <div class="h-7 w-7 rounded-full bg-n0 flex justify-center items-center">
+            <img src="assets/images/icon3.png" class="size-4" alt="" />
+          </div>
+          <p class="pt-3 text-center dark:text-n0 font-medium text-sm">
+            Retrait
+          </p>
+        </a>
+        <a href="#"
+          class="bg-sky-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0">
+          <div class="h-7 w-7 rounded-full bg-n0 flex justify-center items-center">
+            <img src="assets/images/icon2.png" class="size-4" alt="" />
+          </div>
+          <p class="pt-3 text-center dark:text-n0 font-medium text-sm">
+            Top Up
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="bg-white rounded-t-3xl pt-14 -mt-14 flex-1 pb-32 dark:bg-n0">
+      <div class="px-6 pt-8">
+        <a href="bill-pay.html" class="bg-g300 rounded-2xl py-5 px-6 flex justify-between items-center">
+          <div class="w-1/2">
+            <p class="text-white text-xl font-semibold">
+              Regler vos factures rapidement
+            </p>
+            <p class="text-white text-xs pt-1.5">
+              
+            </p>
+            <i class="ph ph-arrow-right text-white"></i>
+          </div>
+          <div class="">
+            <img src="assets/images/pay-bill-illus.png" alt="" />
+          </div>
+        </a>
+      </div>
+      <div class="px-6 pt-8">
+        <div class="flex justify-between items-center">
+          <p class="text-xl font-semibold">Recent Transaction</p>
+          <a href="#" class="text-g300 font-semibold text-sm">
+            View All</a>
+        </div>
+        <div class="flex flex-col gap-4 pt-6">
+          <?php 
+          // select all user transactions from database
+          $stmt = $connection->prepare('SELECT * FROM transaction WHERE telephone_destinataire = :user_phone or telephone_expediteur = :user_phoneex ORDER BY date_transaction DESC LIMIT 5');
+          $stmt->bindValue(':user_phone', $phone, PDO::PARAM_STR);
+          $stmt->bindValue(':user_phoneex', $phone, PDO::PARAM_STR);
+          $stmt->execute();
+          // fetch all transactions
+          $transactions = $stmt->fetchAll(PDO::FETCH_ASSOC);
+          // get the transaction type and display accordingly
+          foreach ($transactions as $transaction) {
+              $montant = htmlspecialchars($transaction['montant'], ENT_QUOTES, 'UTF-8');
+              $telephone_expediteur = htmlspecialchars($transaction['telephone_expediteur'], ENT_QUOTES, 'UTF-8');
+              $telephone_destinataire = htmlspecialchars($transaction['telephone_destinataire'], ENT_QUOTES, 'UTF-8');
+              $date_transaction = htmlspecialchars($transaction['date_transaction'], ENT_QUOTES, 'UTF-8');             
+              if ($telephone_expediteur == $phone) {
+                // get outgoing user datails
+                $stmt2 = $connection->prepare('SELECT * FROM utilisateur WHERE telephone = :telephone');
+                $stmt2->bindValue(':telephone', $telephone_destinataire, PDO::PARAM_STR);
+                $stmt2->execute();
+                $user = $stmt2->fetch(PDO::FETCH_ASSOC);
+                $destinataire = htmlspecialchars($user['nom'], ENT_QUOTES, 'UTF-8');
+                 ?>
+                 <a href="#"
+                  class="flex justify-between items-center border-b border-dashed border-n40 dark:border-darkN40 pb-4">
+                  <div class="flex justify-start items-center gap-4">
+                    <div class="rounded-full bg-bgColor2 dark:bg-darkN40 overflow-hidden">
+                      <img src="assets/images/people-2.png" alt="" class="w-[60px] h-[60px] object-cover" />
+                    </div>
+                    <div class="">
+                      <p class="font-semibold"><?php echo $destinataire ?></p>
+                      <p class="text-n500 dark:text-darkN500 text-xs pt-2.5">
+                        <?php echo $date_transaction ?>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col justify-end items-end">
+                    <p class="font-semibold pb-2">-$<?php echo $montant ?></p>
+                    <p class="text-purple-500 text-xs py-0.5 px-2 bg-purple-200 rounded-md dark:bg-darkN40">
+                      Payé
+                    </p>
+                  </div>
+                </a> 
+                 <?php 
+              }else {
+                // get outgoing user datails
+                $stmt2 = $connection->prepare('SELECT * FROM utilisateur WHERE telephone = :telephone');
+                $stmt2->bindValue(':telephone', $telephone_expediteur, PDO::PARAM_STR);
+                $stmt2->execute();
+                $user = $stmt2->fetch(PDO::FETCH_ASSOC);
+                $expediteur = htmlspecialchars($user['nom'], ENT_QUOTES, 'UTF-8');
+               ?>
+               <a href="#"
+                  class="flex justify-between items-center border-b border-dashed border-n40 dark:border-darkN40 pb-4">
+                  <div class="flex justify-start items-center gap-4">
+                    <div class="rounded-full bg-bgColor2 dark:bg-darkN40 overflow-hidden">
+                      <img src="assets/images/people-1.png" alt="" class="w-[60px] h-[60px] object-cover" />
+                    </div>
+                    <div class="">
+                      <p class="font-semibold"><?php echo $expediteur ?></p>
+                      <p class="text-n500 dark:text-darkN500 text-xs pt-2.5">
+                        <?php echo $date_transaction ?>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex flex-col justify-end items-end">
+                    <p class="font-semibold pb-2">$<?php echo $montant ?></p>
+                    <p class="text-orange-500 text-xs py-0.5 px-2 bg-orange-200 rounded-md dark:bg-darkN40">
+                      Recu
+                    </p>
+                  </div>
+                </a>    
+               <?php 
+              }
+            }
+          ?>
+                
+                   
         </div>
       </div>
     </div>
-    <!-- Splash Screen End -->
-    <main
-      class="container bg-bgColor dark:bg-darkG300 text-n900 dark:text-white pt-8 min-h-dvh flex flex-col"
-    >
-      <div class="px-6 flex justify-between items-start">
-        <div class="rounded-full w-12 h-12 overflow-hidden bg-bgColor2">
-          <img src="assets/images/user.png" alt="" />
-        </div>
 
-        <p class="text-2xl font-semibold">
-          <?php echo $userName ?><!-- <span class="text-g300">X</span> -->
-        </p>
-
-        <a
-          href="notifications.html"
-          class="text-2xl text-g300 border border-n500 !leading-none flex justify-center items-center rounded-full p-2 relative bg-white dark:bg-n0"
-        >
-          <div
-            class="absolute top-0 right-0 bg-bgColor rounded-full w-3 h-3 flex justify-center items-center dark:bg-n0"
-          >
-            <div class="w-2 h-2 rounded-full bg-red-500"></div>
-          </div>
-          <i class="ph-fill ph-bell-simple"></i>
+    <div class="fixed bottom-0 left-0 right-0 container">
+      <div class="p-6 bg-g300 rounded-t-3xl flex justify-between items-center">
+        <a href="home.html" class="flex flex-col gap-1 justify-center items-center">
+          <i class="ph-fill ph-house text-3xl !leading-none text-o300"></i>
+          <p class="text-xs font-semibold text-white">Home</p>
+        </a>
+        <a href="contacts.html" class="flex flex-col gap-1 justify-center items-center">
+          <i class="ph ph-users-three text-3xl !leading-none text-white"></i>
+          <p class="text-xs font-semibold text-white">Contacts</p>
+        </a>
+        <a href="scan-qr-code.html" class="flex justify-center items-center p-3.5 bg-o300 rounded-full">
+          <i class="ph ph-barcode text-2xl !leading-none text-n0"></i>
+        </a>
+        <a href="money-insights.html" class="flex flex-col gap-1 justify-center items-center">
+          <i class="ph ph-chart-line-up text-3xl !leading-none text-white"></i>
+          <p class="text-xs font-semibold text-white">Insights</p>
+        </a>
+        <a href="settings.html" class="flex flex-col gap-1 justify-center items-center">
+          <i class="ph ph-user text-3xl !leading-none text-white"></i>
+          <p class="text-xs font-semibold text-white">Account</p>
         </a>
       </div>
-      <div class="text-center flex justify-between items-center flex-col py-8">
-        <p class="text-[52px] font-bold flex justify-start -mt-3">
-          <?php echo $userAccount ?> <span class="text-xl text-g300 pt-2.5">$</span>
-        </p>
-        <p class="text-n500 dark:text-darkN500">Your Balance</p>
-      </div>
-      <div class="px-6 relative z-20">
-        <div class="flex gap-3 justify-start items-center">
-          <a
-            href="request-money.html"
-            class="bg-orange-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0"
-          >
-            <div
-              class="h-7 w-7 rounded-full bg-n0 flex justify-center items-center"
-            >
-              <img src="assets/images/icon1.png" class="size-4" alt="" />
-            </div>
-            <p class="pt-3 text-center dark:text-n0 font-medium text-sm">
-              Request
-            </p>
-          </a>
-          <a
-            href="send-money.php"
-            class="bg-red-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0"
-          >
-            <div
-              class="h-7 w-7 rounded-full bg-n0 flex justify-center items-center"
-            >
-              <img src="assets/images/icon2.png" class="size-4" alt="" />
-            </div>
-            <p class="pt-3 text-center dark:text-n0 font-medium text-sm">
-              Send
-            </p>
-          </a>
-          <a
-            href="withdraw.html"
-            class="bg-yellow-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0"
-          >
-            <div
-              class="h-7 w-7 rounded-full bg-n0 flex justify-center items-center"
-            >
-              <img src="assets/images/icon3.png" class="size-4" alt="" />
-            </div>
-            <p class="pt-3 text-center dark:text-n0 font-medium text-sm">
-              Withdraw
-            </p>
-          </a>
-          <a
-            href="top-up.html"
-            class="bg-sky-200 rounded-2xl p-4 flex-1 max-w-[85px] flex flex-col justify-center items-center shrink-0"
-          >
-            <div
-              class="h-7 w-7 rounded-full bg-n0 flex justify-center items-center"
-            >
-              <img src="assets/images/icon2.png" class="size-4" alt="" />
-            </div>
-            <p class="pt-3 text-center dark:text-n0 font-medium text-sm">
-              Top Up
-            </p>
-          </a>
-        </div>
-      </div>
-      <div class="bg-white rounded-t-3xl pt-14 -mt-14 flex-1 pb-32 dark:bg-n0">
-        <div class="px-6 pt-8">
-          <a
-            href="bill-pay.html"
-            class="bg-g300 rounded-2xl py-5 px-6 flex justify-between items-center"
-          >
-            <div class="w-1/2">
-              <p class="text-white text-xl font-semibold">
-                Pay Your Bill Uitility Packages
-              </p>
-              <p class="text-white text-xs pt-1.5">
-                Featured Special From $320
-              </p>
-              <i class="ph ph-arrow-right text-white"></i>
-            </div>
-            <div class="">
-              <img src="assets/images/pay-bill-illus.png" alt="" />
-            </div>
-          </a>
-        </div>
-        <div class="px-6 pt-8">
-          <div class="flex justify-between items-center">
-            <p class="text-xl font-semibold">Recent Transaction</p>
-            <a
-              href="transaction-history.html"
-              class="text-g300 font-semibold text-sm"
-            >
-              View All</a
-            >
-          </div>
-          <div class="flex flex-col gap-4 pt-6">
-            <a
-              href="incoming-request.html"
-              class="flex justify-between items-center border-b border-dashed border-n40 dark:border-darkN40 pb-4"
-            >
-              <div class="flex justify-start items-center gap-4">
-                <div
-                  class="rounded-full bg-bgColor2 dark:bg-darkN40 overflow-hidden"
-                >
-                  <img
-                    src="assets/images/people-1.png"
-                    alt=""
-                    class="w-[60px] h-[60px] object-cover"
-                  />
-                </div>
-                <div class="">
-                  <p class="font-semibold">Donald Myers</p>
-                  <p class="text-n500 dark:text-darkN500 text-xs pt-2.5">
-                    08.30 AM
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col justify-end items-end">
-                <p class="font-semibold pb-2">$197.00</p>
-                <p
-                  class="text-orange-500 text-xs py-0.5 px-2 bg-orange-200 rounded-md dark:bg-darkN40"
-                >
-                  Incoming Request
-                </p>
-              </div>
-            </a>
-            <a
-              href="money-sent-details.html"
-              class="flex justify-between items-center border-b border-dashed border-n40 dark:border-darkN40 pb-4"
-            >
-              <div class="flex justify-start items-center gap-4">
-                <div
-                  class="rounded-full bg-bgColor2 dark:bg-darkN40 overflow-hidden"
-                >
-                  <img
-                    src="assets/images/people-2.png"
-                    alt=""
-                    class="w-[60px] h-[60px] object-cover"
-                  />
-                </div>
-                <div class="">
-                  <p class="font-semibold">Bruce Reed</p>
-                  <p class="text-n500 dark:text-darkN500 text-xs pt-2.5">
-                    08.30 AM
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col justify-end items-end">
-                <p class="font-semibold pb-2">-$897.00</p>
-                <p
-                  class="text-red-500 text-xs py-0.5 px-2 bg-red-200 rounded-md dark:bg-darkN40"
-                >
-                  Sent
-                </p>
-              </div>
-            </a>
-            <a
-              href="outgoing-request.html"
-              class="flex justify-between items-center border-b border-dashed border-n40 dark:border-darkN40 pb-4"
-            >
-              <div class="flex justify-start items-center gap-4">
-                <div
-                  class="rounded-full bg-bgColor2 dark:bg-darkN40 overflow-hidden"
-                >
-                  <img
-                    src="assets/images/people-2.png"
-                    alt=""
-                    class="w-[60px] h-[60px] object-cover"
-                  />
-                </div>
-                <div class="">
-                  <p class="font-semibold">Bruce Reed</p>
-                  <p class="text-n500 dark:text-darkN500 text-xs pt-2.5">
-                    08.30 AM
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col justify-end items-end">
-                <p class="font-semibold pb-2">-$897.00</p>
-                <p
-                  class="text-purple-500 text-xs py-0.5 px-2 bg-purple-200 rounded-md dark:bg-darkN40"
-                >
-                  Outgoing Request
-                </p>
-              </div>
-            </a>
-            <a
-              href="money-withdraw-details.html"
-              class="flex justify-between items-center"
-            >
-              <div class="flex justify-start items-center gap-4">
-                <div
-                  class="rounded-full bg-bgColor2 dark:bg-darkN40 overflow-hidden w-[60px] h-[60px] flex justify-center items-center"
-                >
-                  <i class="ph ph-sign-out text-2xl !leading-none"></i>
-                </div>
-                <div class="">
-                  <p class="font-semibold">Essie Sanders</p>
-                  <p class="text-n500 dark:text-darkN500 text-xs pt-2.5">
-                    10.30 AM
-                  </p>
-                </div>
-              </div>
-              <div class="flex flex-col justify-end items-end">
-                <p class="font-semibold pb-2">-$750.00</p>
-                <p
-                  class="text-yellow-700 text-xs py-0.5 px-2 bg-yellow-200 rounded-md dark:bg-darkN40"
-                >
-                  Withdraw
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+    </div>
+  </main>
 
-      <div class="fixed bottom-0 left-0 right-0 container">
-        <div
-          class="p-6 bg-g300 rounded-t-3xl flex justify-between items-center"
-        >
-          <a
-            href="home.html"
-            class="flex flex-col gap-1 justify-center items-center"
-          >
-            <i class="ph-fill ph-house text-3xl !leading-none text-o300"></i>
-            <p class="text-xs font-semibold text-white">Home</p>
-          </a>
-          <a
-            href="contacts.html"
-            class="flex flex-col gap-1 justify-center items-center"
-          >
-            <i class="ph ph-users-three text-3xl !leading-none text-white"></i>
-            <p class="text-xs font-semibold text-white">Contacts</p>
-          </a>
-          <a
-            href="scan-qr-code.html"
-            class="flex justify-center items-center p-3.5 bg-o300 rounded-full"
-          >
-            <i class="ph ph-barcode text-2xl !leading-none text-n0"></i>
-          </a>
-          <a
-            href="money-insights.html"
-            class="flex flex-col gap-1 justify-center items-center"
-          >
-            <i
-              class="ph ph-chart-line-up text-3xl !leading-none text-white"
-            ></i>
-            <p class="text-xs font-semibold text-white">Insights</p>
-          </a>
-          <a
-            href="settings.html"
-            class="flex flex-col gap-1 justify-center items-center"
-          >
-            <i class="ph ph-user text-3xl !leading-none text-white"></i>
-            <p class="text-xs font-semibold text-white">Account</p>
-          </a>
-        </div>
-      </div>
-    </main>
-
-    <!-- ======Javascript Dependencies -->
-    <script src="assets/js/main.js"></script>
-  <script defer src="index.js"></script></body>
+  <!-- ======Javascript Dependencies -->
+  <script src="assets/js/main.js"></script>
+  <script defer src="index.js"></script>
+</body>
 
 <!-- Mirrored from softivuspro.com/html/bankux/main-demo/home.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 09 Nov 2025 18:42:46 GMT -->
+
 </html>
