@@ -83,3 +83,30 @@ if (isset($_POST['signin'])) {
         $error = 'Invalid phone number or password.';
     }
 }
+// Send money Post Request Handling
+if (isset($_POST['EnvoyerArgent'])) {
+    // 1. Sanitize input data
+    $recipientPhone = htmlspecialchars(strip_tags(trim($_POST['contact'])));
+    $amount = floatval($_POST['amount']);
+    // 2. Insert into transactions table
+    $stmt = $connection->prepare('INSERT INTO transaction (telephone_expediteur, telephone_destinataire, montant, date_transaction) VALUES (:sender_phone, :recipient_phone, :amount, NOW())');
+    $stmt->bindValue(':sender_phone', $phone, PDO::PARAM_STR);
+    $stmt->bindValue(':recipient_phone', $recipientPhone, PDO::PARAM_STR);
+    $stmt->bindValue(':amount', $amount, PDO::PARAM_STR);
+    $stmt->execute();
+    // get last insert transaction id
+    $transactionId = $connection->lastInsertId();
+    // 3. Reduce the user account
+    $query = $connection->prepare('UPDATE utilisateur SET solde = solde - :amount WHERE telephone = :telephone');
+    $query->bindValue(':amount', $amount, PDO::PARAM_STR);
+    $query->bindValue(':telephone', $phone, PDO::PARAM_STR);
+    $query->execute();
+    // 4. Increase the recipient account
+    $query = $connection->prepare('UPDATE utilisateur SET solde = solde + :amount WHERE telephone = :telephone');
+    $query->bindValue(':amount', $amount, PDO::PARAM_STR);
+    $query->bindValue(':telephone', $recipientPhone, PDO::PARAM_STR);
+    $query->execute();
+    // 5. Redirect to success page
+    header('Location: ./money-sent-successfully.php?transaction_id=' . $transactionId);        
+    # code...
+}

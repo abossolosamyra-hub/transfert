@@ -1,0 +1,5 @@
+{
+    "powerquery.client.additionalSymbolsDirectories": [
+        "c:/xampp/htdocs/transfert-1/.vscode/excel-pq-symbols"
+    ]
+}
