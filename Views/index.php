@@ -1,43 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BankuX - PWA HTML Template</title>
-    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
-    <link rel="manifest" href="./manifest.json" />
-    <link
-      rel="shortcut icon"
-      href="./assets/images/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./assets/css/swiper.min.css" />
-  <link href="assets/css/index.css" rel="stylesheet"></head>
-  <body class="">
-    <!-- Splash Screen Start -->
-    <div class="preloader inset-0 z-50 hidden">
-      <div
-        class="h-full bg-bgColor flex flex-col justify-center items-center text-center container"
-      >
-        <div class="zoomInOut">
-          <div class="">
-            <img src="./assets/images/logo.png" alt="" />
-          </div>
-          <p class="pt-6 text-4xl font-bold text-n900">
-            Banku<span class="text-g300">X</span>
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Splash Screen End -->
-     <style>
-      body{
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style-index.css" class="rel">
+    <title>E-TRANSFERT</title>
+</head>
+<body>
+  <style>
+  body{
     font-family: 'segoe UI', sans-serif;
     color: #222;
     margin: 0;
     padding:0;
-    background-image: url('yes.jpeg');
+    background-image:url('assets/images/star.jpeg');
     position:relative;
     background-position:center;
     background-size:cover;
@@ -142,7 +119,7 @@ nav a{
     display: inline-block;
     margin-top: 40px;
     padding: 12px 25px;
-    background: #0077cc;
+    background: #007bff;
     color:white;
     text-decoration: none;
     border-radius: 5px;
@@ -160,29 +137,25 @@ footer{
     color:white;
     margin-bottom: 0;
 }
-.a{
-  display: inline-block;
-    margin-top: 40px;
-    padding: 12px 25px;
-    background: #0077cc;
-    color:white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-.a:hover{
-  background:rgb(191, 229, 134);
-    cursor: pointer;
-}
-     </style>
-     <a href="./sign-up.php">s'inscrire</a>
-     <section class="hero"><br>
+</style>
+    <header>
+        <h1> E-TRANSFERT</h1>
+        <nav>
+            <a href="index.php">Accueil</a>
+            <a href="sign-up.php">Inscription</a>
+            <a href="sign-in.php">Mon porte feuille</a>
+            <a href="#">Transfert</a>
+            </nav>
+    </header>
+    <main>
+    <section class="hero"><br>
        <h2>ENVOYER DE L'ARGENT EN TOUTE SIMPLICITE</h2>
         <p>Transfert rapide,sécurisé et  accessible  partout dans le monde sans déplacement!</p>
         <div class="transfert-services" style="padding: 20px; border-radius: 10px; ">
             <h2>Nos services de transfert</h2>
             <p>Nous offrons des services de transfert d'argent sécurisés et rapides.</p>
             <h2>Transfert d'argent <span id="typed-word"></span></h2>
+            <a href="sign-up.php" class=btn>Commencer</a>
         </div>
             <script>
                 const mots =["international","national","en ligne","sécurisé"];
@@ -197,10 +170,6 @@ footer{
     </section>
     </main>
     <footer>&copy; 2025 E-TRANSFERT.Tous droits réservés.</footer>
-
-    <!-- ======Javascript Dependencies -->
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/plugins/swiper-bundle.min.js"></script>
-    <script src="./assets/js/plugins/plugin-custom.js"></script>
-  <script defer src="index.js"></script></body>
+</body>
 </html>
+        
